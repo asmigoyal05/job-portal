@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "buildCommand": "cd frontend && npm install && npm run build",
+  "outputDirectory": "frontend/dist",
+  "rewrites": [
+    { "source": "/api/auth/register", "destination": "/api/auth/register" },
+    { "source": "/api/auth/login", "destination": "/api/auth/login" },
+    { "source": "/api/auth/profile", "destination": "/api/auth/profile" },
+    { "source": "/api/jobs/mine", "destination": "/api/jobs/mine" },
+    { "source": "/api/jobs/:id", "destination": "/api/jobs/[id]" },
+    { "source": "/api/jobs", "destination": "/api/jobs/index" },
+    { "source": "/api/applications/mine", "destination": "/api/applications/mine" },
+    { "source": "/api/applications/job/:jobId", "destination": "/api/applications/job/[jobId]" },
+    { "source": "/api/applications/:id/status", "destination": "/api/applications/[id]/status" },
+    { "source": "/api/applications", "destination": "/api/applications/index" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
